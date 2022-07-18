@@ -1,0 +1,25 @@
+{
+	"name": "mfpl_bolb_sql_sql_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_4",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SinkFilename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().SinkFilename",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,33 @@
+{
+	"name": "ds_url_data_sun",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_venki_pl_adls_1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SinlkFilename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().SinlkFilename",
+					"type": "Expression"
+				},
+				"folderPath": "Multi_url",
+				"fileSystem": "output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

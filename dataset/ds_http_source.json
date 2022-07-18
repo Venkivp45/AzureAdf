@@ -1,0 +1,40 @@
+{
+	"name": "ds_http_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_http4",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"SourceUrl": {
+					"value": "@dataset().Burl",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"Burl": {
+				"type": "string"
+			},
+			"Rurl": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().Rurl",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

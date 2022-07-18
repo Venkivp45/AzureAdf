@@ -1,0 +1,31 @@
+{
+	"name": "mfpl_ds_sql_6",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_4",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"T_name": {
+				"type": "string"
+			},
+			"S_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().S_name",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().T_name",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

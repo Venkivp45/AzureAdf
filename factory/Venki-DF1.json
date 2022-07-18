@@ -1,0 +1,9 @@
+{
+	"name": "Venki-DF1",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "24f98b1b-b315-48cb-bfcb-83929c7a3dbd",
+		"tenantId": "5fa6a6f9-e89e-4df8-8ddf-3b3907ebe33b"
+	}
+}

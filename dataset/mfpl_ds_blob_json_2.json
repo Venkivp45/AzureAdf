@@ -1,0 +1,28 @@
+{
+	"name": "mfpl_ds_blob_json_2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_venki_pl_blob_1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sourceJsonfile": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().sourceJsonfile",
+					"type": "Expression"
+				},
+				"container": "venkiblobcontainer1"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

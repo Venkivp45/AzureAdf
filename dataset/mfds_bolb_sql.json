@@ -1,0 +1,93 @@
+{
+	"name": "mfds_bolb_sql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "mfpl_venki_blob_2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "Test_data_csv",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Measure code",
+				"type": "String"
+			},
+			{
+				"name": "EHR_LINKED_SYSTEM",
+				"type": "String"
+			},
+			{
+				"name": "ELEARNING_TEACHING",
+				"type": "String"
+			},
+			{
+				"name": "ELEARNING_JUSTIF",
+				"type": "String"
+			},
+			{
+				"name": "PROFESSIONAL_GROUP",
+				"type": "String"
+			},
+			{
+				"name": "PROGRAM_TYPE",
+				"type": "String"
+			},
+			{
+				"name": "PROGRAM_LEVEL",
+				"type": "String"
+			},
+			{
+				"name": "EHR_INTERNATIONAL_STANDARD",
+				"type": "String"
+			},
+			{
+				"name": "AUTHORITIY_ROLE_MHEALTH",
+				"type": "String"
+			},
+			{
+				"name": "PROPORTION_USING_EHR",
+				"type": "String"
+			},
+			{
+				"name": "BARRIER",
+				"type": "String"
+			},
+			{
+				"name": "LEVEL_OF_FUNDING",
+				"type": "String"
+			},
+			{
+				"name": "YES_NO",
+				"type": "String"
+			},
+			{
+				"name": "POLICY_EXISTS",
+				"type": "String"
+			},
+			{
+				"name": "POLICY_EXISTS_TYPE",
+				"type": "String"
+			},
+			{
+				"name": "COUNTRY_REGION",
+				"type": "String"
+			},
+			{
+				"name": "VALUE",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

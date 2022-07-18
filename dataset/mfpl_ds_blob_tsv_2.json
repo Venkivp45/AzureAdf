@@ -1,0 +1,31 @@
+{
+	"name": "mfpl_ds_blob_tsv_2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_venki_pl_blob_1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sourcetsvfiule": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().sourcetsvfiule",
+					"type": "Expression"
+				},
+				"container": "venkiblobcontainer1"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

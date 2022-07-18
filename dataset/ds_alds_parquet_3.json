@@ -1,0 +1,21 @@
+{
+	"name": "ds_alds_parquet_3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "mfpl_venki_adls_2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ind_uk.Parquet",
+				"fileSystem": "output"
+			},
+			"compressionCodec": "none"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

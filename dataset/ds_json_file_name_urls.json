@@ -1,0 +1,20 @@
+{
+	"name": "ds_json_file_name_urls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_venki_pl_blob_1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ecdc_file_list.json",
+				"container": "input"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

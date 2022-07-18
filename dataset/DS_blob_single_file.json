@@ -1,0 +1,24 @@
+{
+	"name": "DS_blob_single_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_venki_pl_blob_1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "test.tsv",
+				"container": "venkiblobcontainer1"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

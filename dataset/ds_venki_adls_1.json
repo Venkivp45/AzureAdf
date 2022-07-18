@@ -1,0 +1,24 @@
+{
+	"name": "ds_venki_adls_1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_venki_pl_adls_1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "test.tsv",
+				"fileSystem": "output"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
